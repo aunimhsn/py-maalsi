@@ -2,7 +2,9 @@ import random
 
 
 level = input('1. Facile (0-10) / 2. Moyen (0-100) / 3. Difficile (0-1000) : ')
-
+while level not in ['1', '2', '3']:
+    level = input('1. Facile (0-10) / 2. Moyen (0-100) / 3. Difficile (0-1000) : ')
+    
 match level:
     case '1':
         maximum = 10
