@@ -1,1 +1,5 @@
-print('Hello world!')
+
+
+
+cities = 'toulouse bordeaux nice'
+print(len(cities))
