@@ -1,5 +1,4 @@
+my_nbr = 2
 
 
 
-cities = 'toulouse bordeaux nice'
-print(len(cities))
