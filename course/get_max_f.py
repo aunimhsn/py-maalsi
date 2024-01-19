@@ -12,5 +12,5 @@ def get_max(numbers:list[float]) -> float:
     return result
 
 
-# def get_max(numbers:list[float]) -> float:
-#     filtered = [x for x in numbers if x > 5]
+def get_max(numbers:list[float]) -> float:
+    filtered = [number for i, number in numbers if numbers[i-1] > 5]
