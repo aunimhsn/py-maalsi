@@ -1,13 +1,5 @@
 
 
-
-def generate_rgb(r:int, g:int, b:int):
-    return r, g, b
-
-
-sub_lst = [60, 60]
-colors = [*sub_lst, 60, 112, 50]
-del colors[0]
-
-print(colors)
-print(sub_lst)
+a = [1,4,2,7,1,9,0,3,4,6,6,6,8,3]
+a_filtered = [x for x in a if x > 5]
+print(a_filtered)
