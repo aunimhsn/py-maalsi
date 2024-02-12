@@ -1,15 +1,17 @@
+import json
+
 def caesar(text:str, offset:int = 1) -> str:
     result = ""
     for char in text:
         # Lowercase
-        if "a" <= char <= "z":
+        if char.islower():
             index = ord(char) - ord("a")
             index = (index + offset) % 26
             result += chr(index + ord("a"))
             continue
 
         # Uppercase
-        if "A" <= char <= "Z":
+        if char.isupper():
             index = ord(char) - ord("A")
             index = (index + offset) % 26
             result += chr(index + ord("A"))
@@ -20,5 +22,14 @@ def caesar(text:str, offset:int = 1) -> str:
     
     return result
 
-greeting = 'Hello'
-print(caesar(greeting, 12))
+def caesar_decrypt(text:str) -> list[list[str, int]]:
+    possibilities = []
+
+    for i in range(1, 27):
+        possibilities.append([caesar(text, i), 26 - i])
+
+    return possibilities
+
+message = "Doggs ib pcb kssy-sbr"
+with open('./data/possibilities.json', 'w') as f:
+    json.dump(caesar_decrypt(message), f, indent=4)

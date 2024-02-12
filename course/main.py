@@ -1,7 +1,13 @@
-from string import ascii_uppercase, ascii_lowercase
+oceans = [
+    "Southern",
+    "Arctic"
+]
 
-upper_lst = [*ascii_uppercase]
-print(upper_lst)
+with open("./data/oceans.txt", "a") as f:
+    for ocean in oceans:
+        f.write("\n")
+        f.write(ocean)
 
-# Seconde soluce
-print([ord(letter) for letter in list(ascii_lowercase)])
+        # Autre possibilité
+        # print(ocean, file=f)
+
